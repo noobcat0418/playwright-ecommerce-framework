@@ -1,4 +1,4 @@
-# 🎭 Playwright Sauce Demo Automation Framework
+# Playwright Sauce Demo Automation Framework
 
 A robust, scalable end-to-end test automation framework built with **Playwright** and **TypeScript** for testing the [Sauce Demo](https://www.saucedemo.com) e-commerce application. This framework demonstrates industry best practices including Page Object Model (POM), visual regression testing, and comprehensive test coverage.
 
@@ -8,7 +8,7 @@ A robust, scalable end-to-end test automation framework built with **Playwright*
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
@@ -27,7 +27,7 @@ A robust, scalable end-to-end test automation framework built with **Playwright*
 
 ---
 
-## ✨ Features
+## Features
 
 - ✅ **Page Object Model (POM)** - Maintainable and reusable page classes
 - ✅ **TypeScript** - Type-safe test development
@@ -41,7 +41,7 @@ A robust, scalable end-to-end test automation framework built with **Playwright*
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -52,7 +52,7 @@ A robust, scalable end-to-end test automation framework built with **Playwright*
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 playwright-saucedemo-framework/
@@ -105,7 +105,7 @@ playwright-saucedemo-framework/
 
 ---
 
-## 📌 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -116,7 +116,7 @@ Before you begin, ensure you have the following installed:
 
 ---
 
-## 🚀 Installation
+## Installation
 
 1. **Clone the repository**
 
@@ -145,7 +145,7 @@ npx playwright --version
 
 ---
 
-## ▶️ Running Tests
+## Running Tests
 
 ### Run All Tests
 
@@ -224,7 +224,7 @@ npm run test:visual:update
 
 ---
 
-## 🧪 Test Cases
+## Test Cases
 
 ### Functional Tests (10 Test Cases)
 
@@ -256,7 +256,7 @@ npm run test:visual:update
 
 ---
 
-## 📄 Page Objects
+## Page Objects
 
 ### LoginPage
 
@@ -363,7 +363,7 @@ await productDetailPage.addToCart();
 
 ---
 
-## 🔧 Utilities
+## Utilities
 
 ### WaitHelper
 
@@ -423,7 +423,7 @@ const item = DataGenerator.pickRandom(['a', 'b', 'c']);
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### playwright.config.ts
 
@@ -475,7 +475,7 @@ export default defineConfig({
 
 ---
 
-## 📊 Reports
+## Reports
 
 ### HTML Report
 
@@ -499,7 +499,7 @@ npx playwright show-report
 
 ---
 
-## 🔄 CI/CD Integration
+## CI/CD Integration
 
 ### GitHub Actions Example
 
@@ -545,7 +545,7 @@ jobs:
 
 ---
 
-## 🧹 Clean Up
+## Clean Up
 
 Before pushing to Git, clean generated files:
 
@@ -559,7 +559,7 @@ Remove-Item -Recurse -Force reports, test-results, playwright-report -ErrorActio
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -584,7 +584,7 @@ npm run test:visual:update
 
 ---
 
-## 👤 Author
+## Author
 
 **Mike Ryan B. Cervantes**
 
@@ -592,16 +592,11 @@ npm run test:visual:update
 - 📧 Email: cervantesmikeryan24@gmail.com
 - 💻 GitHub: [@noobcat0418](https://github.com/noobcat0418)
 - 🔗 LinkedIn: [Mike Ryan Cervantes](https://www.linkedin.com/in/mike-ryan-cervantes/)
+ file for details.
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Playwright Documentation](https://playwright.dev/docs/intro)
 - [Sauce Demo](https://www.saucedemo.com) - Test application
@@ -609,4 +604,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-⭐ **If you found this project helpful, please give it a star!**
+**If you found this project helpful, please give it a star!**
