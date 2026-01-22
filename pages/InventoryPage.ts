@@ -32,11 +32,13 @@ export class InventoryPage {
 
   async logout(): Promise<void> {
     await this.hamburgerMenu.click();
+    await this.logoutLink.waitFor({ state: 'visible' });
     await this.logoutLink.click();
   }
 
   async clickAbout(): Promise<void> {
     await this.hamburgerMenu.click();
+    await this.aboutLink.waitFor({ state: 'visible' });
     await this.aboutLink.click();
   }
 
