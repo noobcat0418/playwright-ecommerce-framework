@@ -18,6 +18,8 @@
     "test:sorting": "npx playwright test tests/sorting/",
     "test:visual": "npx playwright test tests/visual/",
     "test:visual:update": "npx playwright test tests/visual/ --update-snapshots",
+    "test:search": "npx playwright test tests/search/ --project=chromium",
+    "test:search:headed": "npx playwright test tests/search/ --project=chromium --headed --workers=1",
     "report": "npx playwright show-report",
     "clean": "if exist reports rmdir /s /q reports && if exist test-results rmdir /s /q test-results && if exist playwright-report rmdir /s /q playwright-report"
   },
