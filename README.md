@@ -1,16 +1,11 @@
 # E-Commerce Test Automation Framework
 
-A production-grade end-to-end test automation framework built with **Playwright** and **TypeScript** for an e-commerce web application. Implements industry best practices including Page Object Model (POM), visual regression testing, cross-browser coverage, and multi-format reporting.
-
-![Playwright](https://img.shields.io/badge/Playwright-1.40.0-45ba4b?style=for-the-badge&logo=playwright&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.3.2-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)
+End-to-end test automation framework built with **Playwright** and **TypeScript** for the e-commerce platform. Implements Page Object Model (POM), visual regression testing, cross-browser coverage, and multi-format reporting.
 
 ---
 
 ## Table of Contents
 
-- [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
@@ -22,21 +17,6 @@ A production-grade end-to-end test automation framework built with **Playwright*
 - [Configuration](#configuration)
 - [Reports](#reports)
 - [CI/CD Integration](#cicd-integration)
-- [Author](#author)
-
----
-
-## Features
-
-- **Page Object Model (POM)** - Maintainable and reusable page classes
-- **TypeScript** - Type-safe test development with strict mode
-- **Visual Regression Testing** - Screenshot comparison for UI validation
-- **Cross-Browser Testing** - Chrome, Firefox, Safari, and mobile browsers
-- **Parallel Execution** - Fast test runs with configurable workers
-- **Auto-Wait Mechanism** - Built-in smart waiting strategies
-- **Multi-Format Reporting** - HTML, JSON, JUnit, and Allure reports
-- **CI/CD Ready** - GitHub Actions, Jenkins, and pipeline-compatible
-- **Utility Helpers** - Custom wait, retry, and data generation utilities
 
 ---
 
@@ -154,7 +134,7 @@ npm run test:search               # Search
 npm run test:visual               # Visual regression
 ```
 
-### Debug & UI Mode
+### Debug and UI Mode
 
 ```bash
 npm run test:debug                # Step-by-step debugger
@@ -325,17 +305,3 @@ jobs:
           path: reports/
           retention-days: 30
 ```
-
----
-
-## Author
-
-**Mike Ryan B. Cervantes**
-- GitHub: [@noobcat0418](https://github.com/noobcat0418)
-- LinkedIn: [Mike Ryan Cervantes](https://www.linkedin.com/in/mike-ryan-cervantes/)
-
----
-
-## License
-
-This project is licensed under the MIT License.

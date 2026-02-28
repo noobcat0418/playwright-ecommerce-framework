@@ -20,7 +20,9 @@ export class SearchPage {
   }
 
   async navigate(): Promise<void> {
-    await this.page.goto('https://www.automationexercise.com/products');
+    // Block ad scripts that interfere with mobile browsers
+    await this.page.route(/googlesyndication|googleads|doubleclick|adservice|google_vignette/, route => route.abort());
+    await this.page.goto('https://www.automationexercise.com/products', { waitUntil: 'domcontentloaded' });
   }
 
   async searchFor(term: string): Promise<void> {

@@ -17,12 +17,8 @@ test.describe('Product Search', () => {
     const searchTerm = 'Top';
 
     await test.step('Submit search for a known product keyword', async () => {
-      await Promise.all([
-        page.waitForResponse(
-          resp => resp.url().includes('search=') && resp.status() === 200
-        ),
-        searchPage.searchFor(searchTerm),
-      ]);
+      await searchPage.searchFor(searchTerm);
+      await expect(searchPage.searchedProductsHeading).toBeVisible();
     });
 
     await test.step('Verify "Searched Products" section is visible', async () => {
@@ -50,12 +46,8 @@ test.describe('Product Search', () => {
     const searchTerm = 'Jeans';
 
     await test.step('Submit search for a known product keyword', async () => {
-      await Promise.all([
-        page.waitForResponse(
-          resp => resp.url().includes('search=') && resp.status() === 200
-        ),
-        searchPage.searchFor(searchTerm),
-      ]);
+      await searchPage.searchFor(searchTerm);
+      await expect(searchPage.searchedProductsHeading).toBeVisible();
     });
 
     await test.step('Verify results are visible', async () => {
@@ -80,12 +72,8 @@ test.describe('Product Search', () => {
     let expectedProductName = '';
 
     await test.step('Submit search and capture first product name', async () => {
-      await Promise.all([
-        page.waitForResponse(
-          resp => resp.url().includes('search=') && resp.status() === 200
-        ),
-        searchPage.searchFor(searchTerm),
-      ]);
+      await searchPage.searchFor(searchTerm);
+      await expect(searchPage.searchedProductsHeading).toBeVisible();
 
       await expect(searchPage.productNames.first()).toBeVisible();
       expectedProductName = (await searchPage.productNames.first().textContent()) ?? '';
