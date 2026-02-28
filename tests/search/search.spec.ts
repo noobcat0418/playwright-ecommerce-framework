@@ -1,4 +1,5 @@
 import { test, expect } from '../../fixtures/pageFixtures';
+import { allure } from 'allure-playwright';
 
 test.describe('Product Search', () => {
 
@@ -7,6 +8,12 @@ test.describe('Product Search', () => {
   });
 
   test('TC-001: Verify search results are displayed when searching for a matching product', async ({ page, searchPage }) => {
+    await allure.epic('Product Catalog');
+    await allure.feature('Search');
+    await allure.story('Search Results Display');
+    await allure.severity('critical');
+    await allure.description('Verify that searching for a known product keyword returns visible results.');
+
     const searchTerm = 'Top';
 
     await test.step('Submit search for a known product keyword', async () => {
@@ -34,6 +41,12 @@ test.describe('Product Search', () => {
   });
 
   test('TC-002: Verify product names in search results contain the search keyword', async ({ page, searchPage }) => {
+    await allure.epic('Product Catalog');
+    await allure.feature('Search');
+    await allure.story('Search Result Accuracy');
+    await allure.severity('normal');
+    await allure.description('Verify that product names in search results contain the search keyword.');
+
     const searchTerm = 'Jeans';
 
     await test.step('Submit search for a known product keyword', async () => {
@@ -56,6 +69,12 @@ test.describe('Product Search', () => {
   });
 
   test('TC-003: Verify clicking a search result navigates to the correct product detail page', async ({ page, searchPage }) => {
+    await allure.epic('Product Catalog');
+    await allure.feature('Search');
+    await allure.story('Search Result Navigation');
+    await allure.severity('normal');
+    await allure.description('Verify that clicking a search result navigates to the correct product detail page.');
+
     const searchTerm = 'Dress';
 
     let expectedProductName = '';

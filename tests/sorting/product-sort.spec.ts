@@ -1,4 +1,5 @@
 import { test, expect } from '../../fixtures/pageFixtures';
+import { allure } from 'allure-playwright';
 
 test.describe('Product Sorting Tests', () => {
 
@@ -9,6 +10,12 @@ test.describe('Product Sorting Tests', () => {
   });
 
   test('TC-012: should sort products by price low to high', async ({ inventoryPage, waitHelper }) => {
+    await allure.epic('Product Catalog');
+    await allure.feature('Product Sorting');
+    await allure.story('Sort by Price');
+    await allure.severity('normal');
+    await allure.description('Verify that products are sorted in ascending order by price when selecting low to high.');
+
     await test.step('Sort by price low to high', async () => {
       await inventoryPage.sortBy('lohi');
       await waitHelper.delay(500);
@@ -34,6 +41,12 @@ test.describe('Product Sorting Tests', () => {
   });
 
   test('TC-013: should sort products by name Z to A', async ({ inventoryPage, waitHelper }) => {
+    await allure.epic('Product Catalog');
+    await allure.feature('Product Sorting');
+    await allure.story('Sort by Name');
+    await allure.severity('normal');
+    await allure.description('Verify that products are sorted in descending alphabetical order when selecting Z to A.');
+
     await test.step('Sort by name Z to A', async () => {
       await inventoryPage.sortBy('za');
       await waitHelper.delay(500);

@@ -12,7 +12,8 @@ export default defineConfig({
     ['html', { outputFolder: 'reports/html-report', open: 'never' }],
     ['list'],
     ['json', { outputFile: 'reports/json-report/results.json' }],
-    ['junit', { outputFile: 'reports/junit-report/results.xml' }]
+    ['junit', { outputFile: 'reports/junit-report/results.xml' }],
+    ['allure-playwright', { outputFolder: 'allure-results' }]
   ],
   
   // Output directories

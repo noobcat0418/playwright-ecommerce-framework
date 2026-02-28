@@ -1,4 +1,4 @@
-// Test Data and Constants for Sauce Demo Tests
+// Test Data and Constants
 
 export const Users = {
   STANDARD: {

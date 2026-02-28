@@ -52,8 +52,8 @@ export const TestSettings = {
   }
 };
 
-// Sauce Demo specific settings
-export const SauceDemoSettings = {
+// Application-specific settings
+export const AppSettings = {
   users: {
     standard: { username: 'standard_user', password: 'secret_sauce' },
     locked: { username: 'locked_out_user', password: 'secret_sauce' },

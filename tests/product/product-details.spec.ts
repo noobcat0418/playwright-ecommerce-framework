@@ -1,4 +1,5 @@
 import { test, expect } from '../../fixtures/pageFixtures';
+import { allure } from 'allure-playwright';
 
 test.describe('Product Details Tests', () => {
 
@@ -8,6 +9,12 @@ test.describe('Product Details Tests', () => {
   });
 
   test('TC-014: should navigate to product details page with all elements', async ({ page, inventoryPage, productDetailPage, waitHelper }) => {
+    await allure.epic('Product Catalog');
+    await allure.feature('Product Details');
+    await allure.story('View Product Information');
+    await allure.severity('normal');
+    await allure.description('Verify that clicking a product navigates to the detail page with all elements displayed correctly.');
+
     const productName = 'Sauce Labs Backpack';
     const expectedPrice = 29.99;
 

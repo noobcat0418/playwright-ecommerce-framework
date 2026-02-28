@@ -1,7 +1,7 @@
 {
-  "name": "playwright-saucedemo-framework",
+  "name": "playwright-ecommerce-framework",
   "version": "2.0.0",
-  "description": "Enhanced Playwright automation framework with visual regression testing",
+  "description": "End-to-end test automation framework for e-commerce platforms using Playwright and TypeScript",
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
@@ -21,13 +21,16 @@
     "test:search": "npx playwright test tests/search/ --project=chromium",
     "test:search:headed": "npx playwright test tests/search/ --project=chromium --headed --workers=1",
     "report": "npx playwright show-report",
-    "clean": "if exist reports rmdir /s /q reports && if exist test-results rmdir /s /q test-results && if exist playwright-report rmdir /s /q playwright-report"
+    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
+    "allure:open": "npx allure open allure-report",
+    "allure:report": "npm run allure:generate && npm run allure:open",
+    "clean": "if exist reports rmdir /s /q reports && if exist test-results rmdir /s /q test-results && if exist playwright-report rmdir /s /q playwright-report && if exist allure-results rmdir /s /q allure-results && if exist allure-report rmdir /s /q allure-report"
   },
   "keywords": [
     "playwright",
     "automation",
     "testing",
-    "saucedemo",
+    "ecommerce",
     "e2e",
     "typescript"
   ],

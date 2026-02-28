@@ -18,6 +18,10 @@ reports/test-results/
 # Uncomment below if you want to track baselines in git:
 # !reports/snapshots/
 
+# Allure
+allure-results/
+allure-report/
+
 # Playwright
 playwright-report/
 playwright/.cache/
@@ -27,7 +31,7 @@ test-results/
 .idea/
 .vscode/
 
-# Claude Code
+# Local config
 .claude/
 *.swp
 *.swo

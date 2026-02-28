@@ -1,4 +1,5 @@
 import { test, expect } from '../../fixtures/pageFixtures';
+import { allure } from 'allure-playwright';
 
 test.describe('Authentication - Logout Tests', () => {
 
@@ -7,6 +8,12 @@ test.describe('Authentication - Logout Tests', () => {
   });
 
   test('TC-011: should logout successfully and redirect to login page', async ({ page, loginPage, inventoryPage, waitHelper }) => {
+    await allure.epic('Authentication');
+    await allure.feature('Logout');
+    await allure.story('Successful Logout');
+    await allure.severity('critical');
+    await allure.description('Verify that a logged-in user can logout and is redirected to the login page with empty fields.');
+
     await test.step('Login with valid credentials', async () => {
       await loginPage.loginAsStandardUser();
       await inventoryPage.verifyOnInventoryPage();

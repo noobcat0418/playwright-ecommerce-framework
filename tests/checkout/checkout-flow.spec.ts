@@ -1,5 +1,6 @@
 import { test, expect } from '../../fixtures/pageFixtures';
 import { DataGenerator } from '../../utils/DataGenerator';
+import { allure } from 'allure-playwright';
 
 test.describe('Checkout Flow Tests', () => {
 
@@ -9,6 +10,12 @@ test.describe('Checkout Flow Tests', () => {
   });
 
   test('TC-015: should complete checkout process end-to-end', async ({ inventoryPage, cartPage, checkoutPage }) => {
+    await allure.epic('Checkout');
+    await allure.feature('Checkout Flow');
+    await allure.story('Complete Purchase');
+    await allure.severity('blocker');
+    await allure.description('Verify the full end-to-end checkout process from adding a product to order completion.');
+
     await test.step('Add product to cart', async () => {
       await inventoryPage.addToCartByName('Sauce Labs Backpack');
     });
@@ -47,6 +54,12 @@ test.describe('Checkout Flow Tests', () => {
   });
 
   test('TC-016: should show error when first name is missing', async ({ inventoryPage, cartPage, checkoutPage }) => {
+    await allure.epic('Checkout');
+    await allure.feature('Checkout Flow');
+    await allure.story('Validation Errors');
+    await allure.severity('normal');
+    await allure.description('Verify that an error message is shown when the first name field is left empty during checkout.');
+
     await test.step('Add product and go to checkout', async () => {
       await inventoryPage.addToCartByName('Sauce Labs Bike Light');
       await inventoryPage.goToCart();
@@ -68,6 +81,12 @@ test.describe('Checkout Flow Tests', () => {
   });
 
   test('TC-020: should calculate checkout totals correctly', async ({ inventoryPage, cartPage, checkoutPage }) => {
+    await allure.epic('Checkout');
+    await allure.feature('Checkout Flow');
+    await allure.story('Price Calculations');
+    await allure.severity('critical');
+    await allure.description('Verify that item total, tax, and grand total are calculated correctly during checkout.');
+
     const backpackPrice = 29.99;
     const bikeLightPrice = 9.99;
     const expectedItemTotal = backpackPrice + bikeLightPrice; // $39.98
